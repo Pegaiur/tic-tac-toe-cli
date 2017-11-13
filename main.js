@@ -23,7 +23,7 @@ process.stdin.on('data', function (text) {
   [${board[0]},${board[1]},${board[2]}]
   [${board[3]},${board[4]},${board[5]}]
   [${board[6]},${board[7]},${board[8]}]
-  ${turns % 2 === 0 ? 'X turn: ' : 'O turn: '}`);
+  ${turns % 2 === 0 ? 'O turn: ' : 'X turn: '}`);
   if (board[0] === board[4] && board[4] === board[8]) {
     win = true;
   }
@@ -48,6 +48,10 @@ process.stdin.on('data', function (text) {
     process.exit();
   }
   turns++;
+  if (turns === 10) {
+    console.log('tie');
+    process.exit();
+  }
 });
 
 
