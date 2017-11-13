@@ -1,0 +1,9 @@
+{
+  "name": "tic-tac-toe-cli",
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "dependencies": {
+    "single-line-log": "^1.1.2"
+  }
+}
